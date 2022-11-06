@@ -16102,15 +16102,16 @@
         }
     },
 	"lightnode.com": {
-		"ipv4": {
-			"185.23.181.223": "Frankfurt, Germany",
-			"38.54.105.45": "Istanbul, Turkey",
-			"103.198.202.10": "Cairo, Egypt",
-			"38.54.2.5": "Bahrain",
-			"103.152.14.114": "Dubai, United Arab Emirates"
-		},
-		"ipv6": {}
-        
+		"lightnode.com": {
+			"ipv4": {
+				"185.23.181.223": "Frankfurt, Germany",
+				"38.54.105.45": "Istanbul, Turkey",
+				"103.198.202.10": "Cairo, Egypt",
+				"38.54.2.5": "Bahrain",
+				"103.152.14.114": "Dubai, United Arab Emirates"
+			},
+			"ipv6": {}
+        }
     },
     "fiberband.net": {},
     "vocus.com.au": {},
