@@ -25,10 +25,11 @@ def error(run):
 for run in range(4):
     try:
         print(f"Fetching {file}")
-        request = urllib.request.urlopen(file, timeout=3)
+        request = urllib.request.urlopen(file, timeout=7)
         if (request.getcode() == 200):
             raw = request.read().decode('utf-8')
             json = json.loads(raw)
+            print("load json file")
             break
         else:
             print("Got non 200 response code")
@@ -38,15 +39,19 @@ for run in range(4):
         error(run)
 
 targets,count,mapping = [],0,{}
-for domain,lgs in json.items():
-    for lg,ip in lgs.items():
-        if ip:
-            for ip,location in ip[mode].items():
-                mapping[ip] = {}
-                if target == "" or target in location:
-                    mapping[ip] = {"domain":domain,"lg":lg,"geo":location}
-                    targets.append(ip)
 
+for domain,lgs in json.items():
+    try:
+        for lg,ip in lgs.items():
+            if ip:
+                for ip,location in ip[mode].items():
+                    mapping[ip] = {}
+                    if target == "" or target in location:
+                        mapping[ip] = {"domain":domain,"lg":lg,"geo":location}
+                        targets.append(ip)
+    except Exception as e:
+        print("error parsing", domain,lgs)
+        
 results = ""
 while count <= len(targets):
     print(f"fping {count} of {len(targets)}")
