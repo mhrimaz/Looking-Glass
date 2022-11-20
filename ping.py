@@ -1,7 +1,7 @@
 import urllib.request, subprocess, json, time, sys, re
 
-pings = 70
-batchSize = 10
+pings = 50
+batchSize = 50
 mode = "ipv4"
 target = ""
 
