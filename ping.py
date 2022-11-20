@@ -1,7 +1,7 @@
 import urllib.request, subprocess, json, time, sys, re
 
-pings = 10
-batchSize = 100
+pings = 70
+batchSize = 10
 mode = "ipv4"
 target = ""
 
@@ -66,18 +66,25 @@ while count <= len(targets):
 parsed = re.findall("([0-9.:a-z]+).*?([0-9]+.[0-9]+|NaN).*?([0-9])% loss",results, re.MULTILINE)
 results = {}
 for ip,ms,loss in parsed:
-    if ms == "NaN": ms = 900
-    if ip not in results: results[ip] = float(ms)
+    if ms == "NaN":
+       ms = 900
+       loss = 100
+    if ip not in results: 
+        results[ip] = (float(ms),float(loss))
 
-sorted = {k: results[k] for k in sorted(results, key=results.get)}
+print(results)
+print("@@@@@@@@@")
+sorted =  sorted(results.items(), key=lambda x : (x[1][0],x[1][1]))
+print(sorted)
 
-result,top = [],100
+
+result,top = [],150
 result.append("Latency\tIP address\tDomain\tLocation (Maxmind)\tLooking Glass")
 result.append("-------\t-------\t-------\t-------\t-------")
-for index,ip in enumerate(sorted.items()):
+for index,ip in enumerate(sorted):
     data = mapping[ip[0]]
-    result.append(f"{ip[1]}ms\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
-    if float(ip[1]) < 20 and index == top: top += 1
+    result.append(f"{ip[1][0]}ms,{ip[1][1]}%\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
+    if float(ip[1][0]) < 20 and index == top: top += 1
     if index == top: break
 
 def formatTable(list):
