@@ -63,8 +63,9 @@ while count <= len(targets):
     results += p.stdout.decode('utf-8')
     count += batchSize
 
+
+parsed = re.findall("([0-9.:a-z]+).*?([0-9]+)%.*?([0-9]+).([0-9]+).([0-9]+)",results, re.MULTILINE)
 results = {}
-parsed = re.findall("([0-9.:a-z]+).*?([0-9]+)%.*?([0-9]+).([0-9]+).([0-9]+)",test, re.MULTILINE)
 for ip,loss,min,avg,max in parsed:
     print(ip,loss,min,avg,max)
     results[ip] = (float(avg),float(loss),float(max)-float(min),float(min),float(max))
