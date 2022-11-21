@@ -219,6 +219,355 @@
             "ipv6": {}
         }
     },
+	"controlvm.com": {
+        "lg.de.controlvm.com": {
+            "ipv4": {
+                "176.9.204.22": "Falkenstein, Germany"
+            },
+            "ipv6": {}
+        }
+    },
+	"buyvm.net": {
+        "speedtest.lu.buyvm.net": {
+            "ipv4": {
+                "104.244.76.191": "Luxembourg, Luxembourg"
+            },
+            "ipv6": {
+                "2605:6400:30:fdd5::1": "Luxembourg, Luxembourg"
+            }
+        }
+    },
+    "edis.at": {
+        "ae.edis.at": {
+            "ipv4": {
+                "103.57.251.10": "Dubai, United Arab Emirates"
+            },
+            "ipv6": {
+                "2a03:f80:971:103:57:251:10:1": "Dubai, United Arab Emirates"
+            }
+        },
+        "at.edis.at": {
+            "ipv4": {
+                "149.154.154.90": "Vienna, Austria"
+            },
+            "ipv6": {
+                "2a03:f80:ed15:149:154:154:90:1": "Vienna, Austria"
+            }
+        },
+        "au.edis.at": {
+            "ipv4": {
+                "194.14.208.10": "Sydney, Australia"
+            },
+            "ipv6": {
+                "2a03:f80:61:194:14:208:10:1": "Sydney, Australia"
+            }
+        },
+        "be.edis.at": {
+            "ipv4": {
+                "192.71.249.10": "Oostkamp, Belgium"
+            },
+            "ipv6": {
+                "2a03:f80:32:192:71:249:10:1": "Oostkamp, Belgium"
+            }
+        },
+        "bg.edis.at": {
+            "ipv4": {
+                "194.68.225.10": "Sofia, Bulgaria"
+            },
+            "ipv6": {
+                "2a03:f80:359:194:68:225:10:1": "Sofia, Bulgaria"
+            }
+        },
+        "ca.edis.at": {
+            "ipv4": {
+                "192.71.227.10": "Montreal, Canada"
+            },
+            "ipv6": {
+                "2605:3b80:cad:192:71:227:10:1": "Montreal, Canada"
+            }
+        },
+        "ch.edis.at": {
+            "ipv4": {
+                "178.209.51.90": "Zurich, Switzerland"
+            },
+            "ipv6": {
+                "2a02:418:6a04:178:209:51:90:1": "Switzerland"
+            }
+        },
+        "cl.edis.at": {
+            "ipv4": {
+                "37.235.52.10": "Vina del Mar, Chile"
+            },
+            "ipv6": {
+                "2a03:f80:56:37:235:52:10:1": "Vina del Mar, Chile"
+            }
+        },
+        "cz.edis.at": {
+            "ipv4": {
+                "193.235.207.10": "Prague, Czechia"
+            },
+            "ipv6": {
+                "2a03:f80:420:193:235:207:10:1": "Prague, Czechia"
+            }
+        },
+        "de.edis.at": {
+            "ipv4": {
+                "158.255.214.100": "Frankfurt am Main, Germany"
+            },
+            "ipv6": {
+                "2a03:f80:49:158:255:214:100:1": "Frankfurt am Main, Germany"
+            }
+        },
+        "dk.edis.at": {
+            "ipv4": {
+                "192.36.27.10": "Copenhagen, Denmark"
+            },
+            "ipv6": {
+                "2a03:f80:45:192:36:27:10:1": "Copenhagen, Denmark"
+            }
+        },
+        "es.edis.at": {
+            "ipv4": {
+                "37.235.53.10": "Seville, Spain"
+            },
+            "ipv6": {
+                "2a00:1d70:ed15:37:235:53:10:1": "Seville, Spain"
+            }
+        },
+        "fr.edis.at": {
+            "ipv4": {
+                "158.255.215.250": "Paris, France"
+            },
+            "ipv6": {
+                "2a03:f80:33:158:255:215:250:1": "Paris, France"
+            }
+        },
+        "gr.edis.at": {
+            "ipv4": {
+                "192.71.166.10": "Thessaloniki, Greece"
+            },
+            "ipv6": {
+                "2a03:f80:30:192:71:166:10:1": "Thessaloniki, Greece"
+            }
+        },
+        "hk.edis.at": {
+            "ipv4": {
+                "158.255.208.12": "Hong Kong"
+            },
+            "ipv6": {
+                "2a03:f80:852:158:255:208:12:1": "Hong Kong"
+            }
+        },
+        "hr.edis.at": {
+            "ipv4": {
+                "46.183.184.10": "Zagreb, Croatia"
+            },
+            "ipv6": {
+                "2a03:f80:385:46:183:184:10:1": "Zagreb, Croatia"
+            }
+        },
+        "hu.edis.at": {
+            "ipv4": {
+                "194.71.130.10": "Hungary"
+            },
+            "ipv6": {
+                "2a03:f80:36:194:71:130:10:0": "Budapest, Hungary"
+            }
+        },
+        "il.edis.at": {
+            "ipv4": {
+                "193.182.144.14": "Tel Aviv, Israel"
+            },
+            "ipv6": {
+                "2a03:f80:972:193:182:144:14:1": "Tel Aviv, Israel"
+            }
+        },
+        "im.edis.at": {
+            "ipv4": {
+                "37.235.55.22": "Douglas, Isle of Man"
+            },
+            "ipv6": {
+                "2a03:f80:44:37:235:55:22:1": "Douglas, Isle of Man"
+            }
+        },
+        "is.edis.at": {
+            "ipv4": {
+                "37.235.49.250": "Hafnarfjordur, Iceland"
+            },
+            "ipv6": {
+                "2a03:f80:354:37:235:49:250:1": "Hafnarfjordur, Iceland"
+            }
+        },
+        "it.edis.at": {
+            "ipv4": {
+                "149.154.157.31": "Milan, Italy"
+            },
+            "ipv6": {
+                "2001:b60:1000:149:154:157:31:1": "Milan, Italy"
+            }
+        },
+        "jp.edis.at": {
+            "ipv4": {
+                "194.68.27.10": "Tokyo, Japan"
+            },
+            "ipv6": {
+                "2a03:f80:81:194:68:27:10:1": "Tokyo, Japan"
+            }
+        },
+        "lt.edis.at": {
+            "ipv4": {
+                "192.36.61.10": "Vilnius, Lithuania"
+            },
+            "ipv6": {
+                "2a03:f80:370:192:36:41:10:1": "Vilnius, Lithuania",
+                "2a03:f80:370:192:36:61:10:1": "Vilnius, Lithuania"
+            }
+        },
+        "lv.edis.at": {
+            "ipv4": {
+                "192.36.41.10": "Riga, Latvia"
+            },
+            "ipv6": {}
+        },
+        "md.edis.at": {
+            "ipv4": {
+                "192.121.87.10": "Chisinau, Moldova"
+            },
+            "ipv6": {
+                "2a03:f80:373:192:121:87:10:1": "Chisinau, Moldova"
+            }
+        },
+        "mk.edis.at": {
+            "ipv4": {
+                "46.183.185.10": "Skopje, North Macedonia"
+            },
+            "ipv6": {
+                "2a03:f80:389:46:183:185:10:1": "Skopje, North Macedonia"
+            }
+        },
+        "nl.edis.at": {
+            "ipv4": {
+                "151.236.14.100": "Netherlands"
+            },
+            "ipv6": {
+                "2a00:1768:1003:151:236:14:100:1": "Netherlands"
+            }
+        },
+        "no.edis.at": {
+            "ipv4": {
+                "194.68.32.10": "Oslo, Norway"
+            },
+            "ipv6": {
+                "2a03:f80:47:194:68:32:10:1": "Oslo, Norway"
+            }
+        },
+        "pl.edis.at": {
+            "ipv4": {
+                "37.235.48.250": "Warsaw, Poland"
+            },
+            "ipv6": {
+                "2a03:f80:48:37:235:48:250:1": "Warsaw, Poland"
+            }
+        },
+        "ro.edis.at": {
+            "ipv4": {
+                "194.68.44.10": "Bucharest, Romania"
+            },
+            "ipv6": {
+                "2a03:f80:40:194:68:44:10:1": "Bucharest, Romania"
+            }
+        },
+        "rs.edis.at": {
+            "ipv4": {
+                "194.71.126.10": "Belgrade, Serbia"
+            },
+            "ipv6": {
+                "2a03:f80:381:194:71:126:10:1": "Belgrade, Serbia"
+            }
+        },
+        "ru.edis.at": {
+            "ipv4": {
+                "213.183.56.10": "Moscow, Russia"
+            },
+            "ipv6": {
+                "2a03:f80:7:213:183:56:10:1": "Moscow, Russia"
+            }
+        },
+        "se.edis.at": {
+            "ipv4": {
+                "46.246.93.100": "Stockholm, Sweden"
+            },
+            "ipv6": {
+                "2a00:1a28:1251:46:246:93:100:1": "Stockholm, Sweden"
+            }
+        },
+        "sg.edis.at": {
+            "ipv4": {
+                "194.68.26.10": "Singapore, Singapore"
+            },
+            "ipv6": {
+                "2a03:f80:65:194:68:26:10:1": "Singapore, Singapore"
+            }
+        },
+        "si.edis.at": {
+            "ipv4": {
+                "192.71.244.10": "Ljubljana, Slovenia"
+            },
+            "ipv6": {
+                "2a03:f80:386:192:71:244:10:1": "Ljubljana, Slovenia"
+            }
+        },
+        "us.edis.at": {
+            "ipv4": {
+                "158.255.213.100": "New York, United States"
+            },
+            "ipv6": {
+                "2605:3b80:1:158:255:213:100:1": "New York, United States"
+            }
+        }
+    },
+	"core-backbone.com": {
+        "ams.lg.core-backbone.com": {
+            "ipv4": {
+                "31.7.177.131": "Germany"
+            },
+            "ipv6": {
+                "2a01:4a0:54::2": "Germany"
+            }
+        },
+        "fra.lg.core-backbone.com": {
+            "ipv4": {
+                "31.7.184.196": "Germany"
+            },
+            "ipv6": {
+                "2a01:4a0:53::2": "Germany"
+            }
+        },
+        "lg.core-backbone.com": {
+            "ipv4": {
+                "83.142.85.226": "Nuremberg, Germany"
+            },
+            "ipv6": {
+                "2a01:4a0:36::2": "Germany"
+            }
+        },
+        "nyk.lg.core-backbone.com": {
+            "ipv4": {
+                "81.95.11.204": "Nuremberg, Germany"
+            },
+            "ipv6": {
+                "2a01:4a0:70::2": "Germany"
+            }
+        },
+        "sin.lg.core-backbone.com": {
+            "ipv4": {
+                "195.138.250.11": "Germany"
+            },
+            "ipv6": {
+                "2a01:4a0:e:1::11": "Germany"
+            }
+        }
+    },
     "pq.hosting": {
         "ca.lg.pq.hosting": {
             "ipv4": {
@@ -303,24 +652,50 @@
             }
         }
     },
-    "melbicom.ru": {
-        "melbicom.ru/datacenter/": {
+    "comnet.com.tr": {
+        "https://lg.comnet.com.tr/": {
             "ipv4": {
-                "103.172.116.3": "Singapore, Singapore",
-                "185.135.86.3": "Riga, Latvia",
-                "185.246.155.7": "Amsterdam, Netherlands",
-                "195.238.126.3": "Vilnius, Lithuania",
-                "213.183.49.158": "Moscow, Russia",
-                "213.183.50.82": "Lithuania",
-                "213.183.63.91": "Sofia, Bulgaria",
-                "213.226.68.73": "Frankfurt am Main, Germany",
-                "217.30.10.3": "Warsaw, Poland",
-                "5.188.181.8": "Madrid, Spain",
-                "91.201.65.108": "Palermo, Italy"
+                "185.17.114.50": "Turkey"
+            },
+            "ipv6": {
+                "2a04:7c0:1:a::2": "Turkey"
+            }
+        }
+    },
+	"Venois Hosting": {
+        "looking.house/point.php?id=408": {
+            "ipv4": {
+                "185.220.59.131": "Istanbul, Turkey"
+            },
+            "ipv6": {
+                "2a0c:f587:fffd:19::1": "Turkey"
+            }
+        }
+    },
+	"hostigger.com": {
+        "https://lg.tr.hostigger.com": {
+            "ipv4": {
+                "185.219.135.57": "Istanbul, Turkey"
             },
             "ipv6": {}
         }
     },
+	"alastyr.com":{
+		"http://lg.alastyr.com/": {
+            "ipv4": {
+                "5.2.80.45": "Izmir, Turkey"
+            },
+            "ipv6": {}
+        }
+	},
+	"isimkayit.com":{
+		"https://lg.isimkayit.com/": {
+            "ipv4": {
+                "185.92.0.222": "Korfez, Turkey"
+            },
+            "ipv6": {}
+        }
+	},
     "vdscom.ru": {
         "https://www.vdscom.ru/lookingglass.php": {
             "ipv4": {

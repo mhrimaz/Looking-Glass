@@ -1,7 +1,7 @@
 import urllib.request, subprocess, json, time, sys, re
 
-pings = 50
-batchSize = 50
+pings = 40
+batchSize = 80
 mode = "ipv4"
 target = ""
 
@@ -56,36 +56,31 @@ results = ""
 while count <= len(targets):
     print(f"fping {count} of {len(targets)}")
     batch = ' '.join(targets[count:count+batchSize])
-    p = subprocess.run(f"fping -c {pings} {batch}", stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    p = subprocess.run(f"fping -q -c {pings} {batch}", stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     if not p.stdout.decode('utf-8'):
         print("Please install fping (apt-get install fping / yum install fping)")
         exit()
     results += p.stdout.decode('utf-8')
     count += batchSize
 
-parsed = re.findall("([0-9.:a-z]+).*?([0-9]+.[0-9]+|NaN).*?([0-9])% loss",results, re.MULTILINE)
 results = {}
-for ip,ms,loss in parsed:
-    if ms == "NaN":
-       ms = 900
-       loss = 100
-    if ip not in results: 
-        results[ip] = (float(ms),float(loss))
+parsed = re.findall("([0-9.:a-z]+).*?([0-9]+)%.*?([0-9]+).([0-9]+).([0-9]+)",test, re.MULTILINE)
+for ip,loss,min,avg,max in parsed:
+    print(ip,loss,min,avg,max)
+    results[ip] = (float(avg),float(loss),float(max)-float(min),float(min),float(max))
+  
 
-print(results)
-print("@@@@@@@@@")
-sorted =  sorted(results.items(), key=lambda x : (x[1][0],x[1][1]))
-print(sorted)
+sorted =  sorted(results.items(), key=lambda x : (x[1][0],x[1][1],x[1][2]))
 
 
-result,top = [],150
+
+result = []
 result.append("Latency\tIP address\tDomain\tLocation (Maxmind)\tLooking Glass")
 result.append("-------\t-------\t-------\t-------\t-------")
 for index,ip in enumerate(sorted):
     data = mapping[ip[0]]
-    result.append(f"{ip[1][0]}ms,{ip[1][1]}%\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
-    if float(ip[1][0]) < 20 and index == top: top += 1
-    if index == top: break
+    result.append(f"{ip[1][0]}ms,{ip[1][1]}%,{ip[1][2]}\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
+    
 
 def formatTable(list):
     longest,response = {},""
@@ -106,5 +101,4 @@ def formatTable(list):
     return response
 
 result = formatTable(result)
-print(f"\nTop {top}")
 print(result)
