@@ -83,7 +83,7 @@ result.append("Latency\tIP address\tDomain\tLocation (Maxmind)\tLooking Glass")
 result.append("-------\t-------\t-------\t-------\t-------")
 for index,ip in enumerate(sorted):
     data = mapping[ip[0]]
-    result.append(f"{ip[1][0]}ms,{ip[1][1]}%,{ip[1][2]}\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
+    result.append(f"{ip[1][0]:.1f}ms,{ip[1][1]:.1f}%,{ip[1][2]:.1f}\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
     
 
 def formatTable(list):
