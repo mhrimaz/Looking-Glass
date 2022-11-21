@@ -67,7 +67,7 @@ while count <= len(targets):
     count += batchSize
 
 
-parsed = re.findall("([0-9.:a-z]+).*?[/]([0-9]+[.]?[0-9]*)%.*?([0-9]+[.]?[0-9]*)[/]([0-9]+[.]?[0-9]*)[/]([0-9]+[.]?[0-9]*)",test, re.MULTILINE)
+parsed = re.findall("([0-9.:a-z]+).*?[/]([0-9]+[.]?[0-9]*)%.*?([0-9]+[.]?[0-9]*)[/]([0-9]+[.]?[0-9]*)[/]([0-9]+[.]?[0-9]*)",results, re.MULTILINE)
 results = {}
 for ip,loss,min,avg,max in parsed:
     print(ip,loss,min,avg,max)
