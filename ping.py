@@ -55,7 +55,10 @@ for domain,lgs in json.items():
 results = ""
 while count <= len(targets):
     print(f"fping {count} of {len(targets)}")
-    batch = ' '.join(targets[count:count+batchSize])
+    if count+batchSize >= len(targets):
+        batch = ' '.join(targets[count:len(targets)-1])
+    else:
+        batch = ' '.join(targets[count:count+batchSize])
     p = subprocess.run(f"fping -c {pings} {batch}", stdin=None, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     if not p.stdout.decode('utf-8'):
         print("Please install fping (apt-get install fping / yum install fping)")
@@ -64,14 +67,17 @@ while count <= len(targets):
     count += batchSize
 
 
-parsed = re.findall("([0-9.:a-z]+).*?([0-9]+)%.*?([0-9]+).([0-9]+).([0-9]+)",results, re.MULTILINE)
+parsed = re.findall("([0-9.:a-z]+).*?([0-9]+.[0-9]+|NaN).*?([0-9])% loss",results, re.MULTILINE)
 results = {}
-for ip,loss,min,avg,max in parsed:
-    print(ip,loss,min,avg,max)
-    results[ip] = (float(avg),float(loss),float(max)-float(min),float(min),float(max))
+for ip,ms,loss in parsed:
+    if ms == "NaN":
+       ms = 900
+       loss = 100
+    if ip not in results: 
+        results[ip] = (float(ms),float(loss))
   
 
-sorted =  sorted(results.items(), key=lambda x : (x[1][0],x[1][1],x[1][2]))
+sorted =  sorted(results.items(), key=lambda x : (x[1][0],x[1][1]))
 
 
 
@@ -80,7 +86,7 @@ result.append("Latency\tIP address\tDomain\tLocation (Maxmind)\tLooking Glass")
 result.append("-------\t-------\t-------\t-------\t-------")
 for index,ip in enumerate(sorted):
     data = mapping[ip[0]]
-    result.append(f"{ip[1][0]}ms,{ip[1][1]}%,{ip[1][2]}\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
+    result.append(f"{ip[1][0]}ms,{ip[1][1]}%\t{ip[0]}\t{data['domain']}\t{data['geo']}\t{data['lg']}")
     
 
 def formatTable(list):
