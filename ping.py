@@ -4,6 +4,7 @@ pings = 40
 batchSize = 80
 mode = "ipv4"
 target = ""
+file = "https://raw.githubusercontent.com/mhrimaz/Looking-Glass/master/data/everything.json"
 
 if len(sys.argv) >= 2:
     print("arguments ", sys.argv)
@@ -14,8 +15,9 @@ if len(sys.argv) >= 2:
         if arg[1] == "-l": target = arg[2]
         if arg[1] == "-a": file = "https://raw.githubusercontent.com/Ne00n/Looking-Glass/master/data/everything.json"
         if arg[0] == "-6": mode = "ipv6"
+            
+print("Ping count:",pings," Batch size:",batchSize," Mode:", mode)
 
-file = "https://raw.githubusercontent.com/mhrimaz/Looking-Glass/master/data/everything.json"
 
 def error(run):
     print(f"Retrying {run+1} of 4")
