@@ -8,12 +8,12 @@ file = "https://raw.githubusercontent.com/mhrimaz/Looking-Glass/master/data/ever
 
 if len(sys.argv) >= 2:
     print("arguments ", sys.argv)
-    args = re.findall("((-c|-p|-l|-a)\s?([0-9A-Za-z]+)|-6)",' '.join(sys.argv[1:]))
+    args = re.findall("((-c|-p|-l|-a)\s?([0-9A-Za-z]+)|-6|-a)",' '.join(sys.argv[1:]))
     for arg in args:
         if arg[1] == "-c": pings = float(arg[2])
         if arg[1] == "-p": batchSize = int(arg[2])
         if arg[1] == "-l": target = arg[2]
-        if arg[1] == "-a": file = "https://raw.githubusercontent.com/Ne00n/Looking-Glass/master/data/everything.json"
+        if arg[0] == "-a": file = "https://raw.githubusercontent.com/Ne00n/Looking-Glass/master/data/everything.json"
         if arg[0] == "-6": mode = "ipv6"
             
 print("Ping count:",pings," Batch size:",batchSize," Mode:", mode)
